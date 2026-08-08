@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ebedf3;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      /* Full-bleed scene fill — kept off the root so the render doesn't drop it */
+      .bg {
+        position: absolute;
+        inset: 0;
+        background: #ebedf3;
+      }
+
+      .ball {
+        position: absolute;
+        top: 180px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: #000;
+      }
+      /* centers at x = 480 / 960 / 1440 (evenly spaced), so left = center - 60 */
+      #ball-1 { left: 420px; }
+      #ball-2 { left: 900px; }
+      #ball-3 { left: 1380px; }
+
+      /* Faint floor line at the landing level (ball top 180 + drop 600 + diameter 120 = 900) */
+      .floor {
+        position: absolute;
+        left: 0;
+        top: 900px;
+        width: 1920px;
+        height: 2px;
+        background: rgba(0, 0, 0, 0.12);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="2"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div class="bg"></div>
+
+      <div class="floor"></div>
+
+      <div id="ball-1" class="ball clip" data-start="0" data-duration="2" data-track-index="1"></div>
+      <div id="ball-2" class="ball clip" data-start="0" data-duration="2" data-track-index="2"></div>
+      <div id="ball-3" class="ball clip" data-start="0" data-duration="2" data-track-index="3"></div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // 0.3s hold so the starting position reads, then all three drop 600px together over 1.2s.
+      tl.to("#ball-1", { y: 600, duration: 1.2, ease: "none" }, 0.3);
+      tl.to("#ball-2", { y: 600, duration: 1.2, ease: "power2.in" }, 0.3);
+      tl.to("#ball-3", { y: 600, duration: 1.2, ease: "bounce.out" }, 0.3);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
