@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/DrawSVGPlugin.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ebedf3;
+      }
+      .bg { position: absolute; inset: 0; background: #ebedf3; }
+      .scene { position: absolute; inset: 0; }
+      svg { display: block; width: 1920px; height: 1080px; }
+      .stem {
+        fill: none;
+        stroke: #19191A;
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .bloom { fill: #19191A; }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="plant"
+      data-start="0"
+      data-duration="4.5"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div class="bg"></div>
+
+      <div class="scene clip" id="plant-scene" data-start="0" data-duration="4.5" data-track-index="1">
+        <svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+          <g class="stem">
+        <path id="m0" d="M 960 1000 Q 852.45 926.04 777.4 819.24" />
+        <path id="s00" d="M 777.4 819.24 Q 710.01 823.96 655.37 784.22" />
+        <path id="s01" d="M 777.4 819.24 Q 730.19 746.59 729.93 659.94" />
+        <path id="m1" d="M 960 1000 Q 949.48 868.33 899.44 746.09" />
+        <path id="s10" d="M 899.44 746.09 Q 853.62 705.86 824.74 652.16" />
+        <path id="s11" d="M 899.44 746.09 Q 891.9 660.3 932.8 584.51" />
+        <path id="m2" d="M 960 1000 Q 1002.55 866.55 1067.9 742.66" />
+        <path id="s20" d="M 1067.9 742.66 Q 1039.5 682.32 1056.45 617.81" />
+        <path id="s21" d="M 1067.9 742.66 Q 1136.67 716.68 1175.81 654.47" />
+        <path id="m3" d="M 960 1000 Q 1054.06 877.77 1183.29 793.59" />
+        <path id="s30" d="M 1183.29 793.59 Q 1231.78 741.82 1238.51 671.2" />
+        <path id="s31" d="M 1183.29 793.59 Q 1251.71 791.82 1305.57 749.6" />
+          </g>
+          <g class="bloom">
+        <circle id="c000" cx="655.86" cy="782.67" r="21.86" />
+        <circle id="c001" cx="650.45" cy="796.31" r="16.43" />
+        <circle id="c002" cx="668.19" cy="782.52" r="14.35" />
+        <circle id="c003" cx="651.97" cy="776.73" r="12.08" />
+        <circle id="c004" cx="672.74" cy="788.8" r="11.58" />
+        <circle id="c005" cx="648.21" cy="773.26" r="17.74" />
+        <circle id="c006" cx="668.64" cy="781.11" r="14.64" />
+        <circle id="c010" cx="730.38" cy="662.04" r="27.76" />
+        <circle id="c011" cx="735.6" cy="662.45" r="12.73" />
+        <circle id="c012" cx="724.71" cy="683.87" r="11.31" />
+        <circle id="c013" cx="742.52" cy="657.1" r="15.58" />
+        <circle id="c014" cx="720.57" cy="658.91" r="19.51" />
+        <circle id="c100" cx="824.07" cy="653.74" r="27.16" />
+        <circle id="c101" cx="815.65" cy="635.22" r="13.6" />
+        <circle id="c102" cx="815.25" cy="648.28" r="13.68" />
+        <circle id="c103" cx="830.57" cy="669.33" r="18.86" />
+        <circle id="c104" cx="836.22" cy="636.31" r="13.61" />
+        <circle id="c105" cx="831.26" cy="667.22" r="13.73" />
+        <circle id="c106" cx="828.14" cy="643.69" r="16.35" />
+        <circle id="c110" cx="931.68" cy="586.68" r="26.26" />
+        <circle id="c111" cx="939.98" cy="584.19" r="11.27" />
+        <circle id="c112" cx="956.94" cy="590.13" r="17.5" />
+        <circle id="c113" cx="928.8" cy="594.51" r="8.5" />
+        <circle id="c114" cx="923.79" cy="609.42" r="18.36" />
+        <circle id="c115" cx="926.66" cy="565.1" r="18.67" />
+        <circle id="c116" cx="919.47" cy="593.99" r="10.94" />
+        <circle id="c117" cx="945.2" cy="602.22" r="17.25" />
+        <circle id="c200" cx="1058.03" cy="615.61" r="24.07" />
+        <circle id="c201" cx="1048.6" cy="637.43" r="18.11" />
+        <circle id="c202" cx="1039.69" cy="599.7" r="9.72" />
+        <circle id="c203" cx="1076.57" cy="627.87" r="10.11" />
+        <circle id="c204" cx="1070.55" cy="613.85" r="19.13" />
+        <circle id="c205" cx="1052.47" cy="607.42" r="13.06" />
+        <circle id="c210" cx="1173.49" cy="651.87" r="25.62" />
+        <circle id="c211" cx="1181.11" cy="645.61" r="8.06" />
+        <circle id="c212" cx="1180.84" cy="663.24" r="8.55" />
+        <circle id="c213" cx="1174.39" cy="641.97" r="10.45" />
+        <circle id="c214" cx="1182.62" cy="664.34" r="18.72" />
+        <circle id="c215" cx="1172.65" cy="646.71" r="14.89" />
+        <circle id="c216" cx="1158.43" cy="650.4" r="12.48" />
+        <circle id="c300" cx="1237.98" cy="671.06" r="22.02" />
+        <circle id="c301" cx="1248.67" cy="677.21" r="14.99" />
+        <circle id="c302" cx="1251.89" cy="691.79" r="12.75" />
+        <circle id="c303" cx="1244.79" cy="661.65" r="12" />
+        <circle id="c304" cx="1246.58" cy="673.85" r="12.84" />
+        <circle id="c305" cx="1224" cy="675.01" r="16.58" />
+        <circle id="c310" cx="1306.02" cy="747.77" r="21.51" />
+        <circle id="c311" cx="1298.78" cy="741.92" r="11.59" />
+        <circle id="c312" cx="1306.27" cy="739.35" r="8.04" />
+        <circle id="c313" cx="1310.32" cy="754.1" r="16.65" />
+        <circle id="c314" cx="1304.44" cy="768.88" r="19.01" />
+        <circle id="c315" cx="1320.09" cy="755.64" r="18.06" />
+        <circle id="c316" cx="1318.04" cy="737.05" r="8.79" />
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <script>
+      gsap.registerPlugin(DrawSVGPlugin);
+      window.__timelines = window.__timelines || {};
+
+      // All geometry + timing is precomputed (seeded) at author time.
+      const SPECS = [{"t":"draw","id":"m0","start":0,"dur":0.6},{"t":"draw","id":"s00","start":0.6,"dur":0.5},{"t":"draw","id":"s01","start":0.68,"dur":0.5},{"t":"draw","id":"m1","start":0.45,"dur":0.6},{"t":"draw","id":"s10","start":1.05,"dur":0.5},{"t":"draw","id":"s11","start":1.13,"dur":0.5},{"t":"draw","id":"m2","start":0.9,"dur":0.6},{"t":"draw","id":"s20","start":1.5,"dur":0.5},{"t":"draw","id":"s21","start":1.58,"dur":0.5},{"t":"draw","id":"m3","start":1.35,"dur":0.6},{"t":"draw","id":"s30","start":1.95,"dur":0.5},{"t":"draw","id":"s31","start":2.03,"dur":0.5},{"t":"pop","id":"c000","start":1.1},{"t":"pop","id":"c001","start":1.19},{"t":"pop","id":"c002","start":1.28},{"t":"pop","id":"c003","start":1.37},{"t":"pop","id":"c004","start":1.46},{"t":"pop","id":"c005","start":1.55},{"t":"pop","id":"c006","start":1.64},{"t":"pop","id":"c010","start":1.18},{"t":"pop","id":"c011","start":1.27},{"t":"pop","id":"c012","start":1.36},{"t":"pop","id":"c013","start":1.45},{"t":"pop","id":"c014","start":1.54},{"t":"pop","id":"c100","start":1.55},{"t":"pop","id":"c101","start":1.64},{"t":"pop","id":"c102","start":1.73},{"t":"pop","id":"c103","start":1.82},{"t":"pop","id":"c104","start":1.91},{"t":"pop","id":"c105","start":2},{"t":"pop","id":"c106","start":2.09},{"t":"pop","id":"c110","start":1.63},{"t":"pop","id":"c111","start":1.72},{"t":"pop","id":"c112","start":1.81},{"t":"pop","id":"c113","start":1.9},{"t":"pop","id":"c114","start":1.99},{"t":"pop","id":"c115","start":2.08},{"t":"pop","id":"c116","start":2.17},{"t":"pop","id":"c117","start":2.26},{"t":"pop","id":"c200","start":2},{"t":"pop","id":"c201","start":2.09},{"t":"pop","id":"c202","start":2.18},{"t":"pop","id":"c203","start":2.27},{"t":"pop","id":"c204","start":2.36},{"t":"pop","id":"c205","start":2.45},{"t":"pop","id":"c210","start":2.08},{"t":"pop","id":"c211","start":2.17},{"t":"pop","id":"c212","start":2.26},{"t":"pop","id":"c213","start":2.35},{"t":"pop","id":"c214","start":2.44},{"t":"pop","id":"c215","start":2.53},{"t":"pop","id":"c216","start":2.62},{"t":"pop","id":"c300","start":2.45},{"t":"pop","id":"c301","start":2.54},{"t":"pop","id":"c302","start":2.63},{"t":"pop","id":"c303","start":2.72},{"t":"pop","id":"c304","start":2.81},{"t":"pop","id":"c305","start":2.9},{"t":"pop","id":"c310","start":2.53},{"t":"pop","id":"c311","start":2.62},{"t":"pop","id":"c312","start":2.71},{"t":"pop","id":"c313","start":2.8},{"t":"pop","id":"c314","start":2.89},{"t":"pop","id":"c315","start":2.98},{"t":"pop","id":"c316","start":3.07}];
+
+      const tl = gsap.timeline({ paused: true });
+
+      for (const s of SPECS) {
+        const el = "#" + s.id;
+        if (s.t === "draw") {
+          // Lines draw on from the base outward.
+          tl.from(el, { drawSVG: "0%", duration: s.dur, ease: "power2.out" }, s.start);
+        } else {
+          // Circles pop in: scale 0.6 -> 1.04 -> 1 over 250ms.
+          tl.fromTo(
+            el,
+            { scale: 0.6, autoAlpha: 0, transformOrigin: "50% 50%" },
+            {
+              keyframes: [
+                { scale: 1.04, autoAlpha: 1, duration: 0.15, ease: "power2.out" },
+                { scale: 1, duration: 0.1, ease: "power2.inOut" },
+              ],
+              transformOrigin: "50% 50%",
+            },
+            s.start
+          );
+        }
+      }
+
+      window.__timelines["plant"] = tl;
+    </script>
+  </body>
+</html>
